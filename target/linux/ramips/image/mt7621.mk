@@ -280,6 +280,16 @@ define Device/beeline_smartbox-turbo-plus
 endef
 TARGET_DEVICES += beeline_smartbox-turbo-plus
 
+define Device/bolt_arion_pl100
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 32448k
+  DEVICE_VENDOR := BOLT
+  DEVICE_MODEL := Arion Pl100
+  DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 uboot-envtools
+endef
+TARGET_DEVICES += bolt_arion_pl100
+
 define Device/buffalo_wsr-1166dhp
   $(Device/dsa-migration)
   $(Device/uimage-lzma-loader)
@@ -324,16 +334,6 @@ define Device/cudy_wr1300
 	kmod-usb-ledtrig-usbport
 endef
 TARGET_DEVICES += cudy_wr1300
-
-define Device/bolt_arion_pl1000
-  $(Device/dsa-migration)
-  $(Device/uimage-lzma-loader)
-  IMAGE_SIZE := 32448k
-  DEVICE_VENDOR := BOLT
-  DEVICE_MODEL := Arion Pl100
-  DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 uboot-envtools
-endef
-TARGET_DEVICES += bolt_arion_pl100
 
 define Device/cudy_wr2100
   $(Device/dsa-migration)
