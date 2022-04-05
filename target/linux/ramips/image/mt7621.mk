@@ -280,15 +280,15 @@ define Device/beeline_smartbox-turbo-plus
 endef
 TARGET_DEVICES += beeline_smartbox-turbo-plus
 
-define Device/bolt_arion_pl100
+define Device/bolt_arion
   $(Device/dsa-migration)
   $(Device/uimage-lzma-loader)
   IMAGE_SIZE := 32448k
   DEVICE_VENDOR := BOLT
-  DEVICE_MODEL := Arion Pl100
+  DEVICE_MODEL := Arion
   DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 uboot-envtools
 endef
-TARGET_DEVICES += bolt_arion_pl100
+TARGET_DEVICES += bolt_arion
 
 define Device/buffalo_wsr-1166dhp
   $(Device/dsa-migration)
